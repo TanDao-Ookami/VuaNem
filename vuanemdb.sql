@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2022 at 06:40 PM
+-- Generation Time: Apr 11, 2022 at 08:02 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -53,7 +53,7 @@ INSERT INTO `tblchitietdonhang` (`mactdh`, `madh`, `tenhang`, `gia`, `soluong`) 
 --
 
 CREATE TABLE `tbldonhang` (
-  `mahd` int(11) NOT NULL,
+  `madh` int(11) NOT NULL,
   `sodienthoai` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `diachigiao` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tinhtrang` int(11) NOT NULL
@@ -63,7 +63,7 @@ CREATE TABLE `tbldonhang` (
 -- Dumping data for table `tbldonhang`
 --
 
-INSERT INTO `tbldonhang` (`mahd`, `sodienthoai`, `diachigiao`, `tinhtrang`) VALUES
+INSERT INTO `tbldonhang` (`madh`, `sodienthoai`, `diachigiao`, `tinhtrang`) VALUES
 (1, '0935822110', 'Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, TP.HCM', 1),
 (2, '0987654321', 'Lê Lợi, Quận Gò Vấp, TP.HCM', 2);
 
@@ -84,8 +84,23 @@ CREATE TABLE `tblkhachhang` (
 --
 
 INSERT INTO `tblkhachhang` (`sodienthoai`, `tenkh`, `diachi`) VALUES
+('04565676', 'Vinh', 'TP.HCM'),
+('0877665544', 'Khanh', 'Bình Thạnh'),
+('09088788', 'Đào Nguyễn Duy Bảo', 'TP.HCM'),
+('0935112334', 'Khoa', 'TP.HCM'),
+('0935112335', 'Khoa', 'TP.HCM'),
+('0935112336', 'Khoa', 'TP.HCM'),
+('0935622800', 'Đào Nguyễn Duy Bảo', 'TP.HCM'),
+('093566884', 'Đào Nguyễn Duy Bảo', 'TP.HCM'),
 ('0935822110', 'Đào Nguyễn Duy Tấn', 'Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, TP.HCM'),
-('0987654321', 'Đào Duy Từ', 'Lê Lợi, Quận Gò Vấp, TP.HCM');
+('0985422339', 'Linh', 'Gò Vấp'),
+('098647443', 'Lộc', 'Q2'),
+('0987654321', 'Đào Duy Từ', 'Lê Lợi, Quận Gò Vấp, TP.HCM'),
+('1111111111', 'Phú', 'Q4'),
+('123456789', 'Bảo', 'TP.HCM'),
+('123498765', 'Khang', 'Q1'),
+('3333333333', 'Giang', 'Q5'),
+('555555555', 'SAO', 'Q3');
 
 -- --------------------------------------------------------
 
@@ -117,7 +132,8 @@ INSERT INTO `tblsanpham` (`ma`, `hinh`, `ten`, `gia`, `flashsale`) VALUES
 (47, './assets/img/Content/product/product-9.jpg', 'Nệm lò xo Therapedic Therawrap Plus', 37319000, 27000000),
 (48, './assets/img/Content/product/product-10.jpg', 'Nệm Foam Aeroflow Wave', 15460000, 13460000),
 (49, './assets/img/Content/product/product-11.jpg', 'Nệm Foam Goodnight Eva', 2650000, 2000000),
-(50, './assets/img/Content/product/product-12.jpg', 'Nệm Massage Nhật Bản Goodnight Osaka', 4290000, 4000000);
+(50, './assets/img/Content/product/product-12.jpg', 'Nệm Massage Nhật Bản Goodnight Osaka', 4290000, 4000000),
+(51, './assets/img/Content/product/product-13.jpg', 'Nệm cao su foam Vạn Thành Venus - 1247', 4700500, 3700500);
 
 -- --------------------------------------------------------
 
@@ -135,7 +151,6 @@ CREATE TABLE `tbltinhtrang` (
 --
 
 INSERT INTO `tbltinhtrang` (`matt`, `tentt`) VALUES
-(0, ''),
 (1, 'Chờ duyệt'),
 (2, 'Đã duyệt'),
 (3, 'Đang giao'),
@@ -155,7 +170,7 @@ ALTER TABLE `tblchitietdonhang`
 -- Indexes for table `tbldonhang`
 --
 ALTER TABLE `tbldonhang`
-  ADD PRIMARY KEY (`mahd`);
+  ADD PRIMARY KEY (`madh`);
 
 --
 -- Indexes for table `tblkhachhang`
@@ -189,13 +204,13 @@ ALTER TABLE `tblchitietdonhang`
 -- AUTO_INCREMENT for table `tbldonhang`
 --
 ALTER TABLE `tbldonhang`
-  MODIFY `mahd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `madh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblsanpham`
 --
 ALTER TABLE `tblsanpham`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

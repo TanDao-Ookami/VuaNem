@@ -41,10 +41,10 @@
 <body>
     <div id="content">
     <form method='POST' class='form-button' action='index.php' style='display: flex;justify-content: center; padding-bottom:10px'>
-    <input type='submit' class='button-item' name='trangchu' value='Trang chu'>
+    <input type='submit' class='button-item' name='trangchu' value='Trang Chủ'>
     </form>
     <form method='POST' class='form-button' action='themsp.php' style='display: flex; padding-bottom:10px;justify-content: center;'>
-    <input type='submit' class='button-item' name='tieptuc' value='Tiep tuc'>
+    <input type='submit' class='button-item' name='tieptuc' value='Thêm Sản Phẩm'>
     </form>
         <div class="product-section">
             <div class="list-product">
@@ -82,12 +82,12 @@
 
                         echo "<form method='POST' class='form-button' action='xoasp.php' style='display: inline;'>";
                         echo "<input type='hidden' name='masp_xoa' value='{$ma}'>";
-                        echo "<input type='submit' class='button-item' name='xoasp' value='Xoa'>";
+                        echo "<input type='submit' class='button-item' name='xoasp' value='Xóa'>";
                         echo "</form>";
 
                         echo "<form method='POST' class='form-button' action='capnhatsp.php' style='display: inline;'>";
                         echo "<input type='hidden' name='masp_capnhat' value='{$ma}'>";
-                        echo "<input type='submit' class='button-item' name='capnhatsp' value='Cap nhat' >";
+                        echo "<input type='submit' class='button-item' name='capnhatsp' value='Cập Nhật' >";
                         echo "</form>";
 
                         

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vua Nệm - Hệ Thống Bán Lẻ Nệm & Chăn Ga Gối Đệm Toàn Quốc</title>
+    <title>Siêu Nệm - Hệ Thống Bán Lẻ Nệm & Chăn Ga Gối Đệm Toàn Quốc</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -65,6 +65,15 @@
                 <div class="header-center-container">
                     <div class="logo-header">
                         <img class="logo-dream" src="./assets/img/Header/astronaut-fishing-stars-512x512.png" alt="logo-dream">
+                    </div>
+                    <div class="sieunem">
+                        <span class="word">S</span>
+                        <span class="word">I</span>
+                        <span class="word">E</span>
+                        <span class="word">U</span>
+                        <span class="word">N</span>
+                        <span class="word">E</span>
+                        <span class="word">M</span>
                     </div>
                     <div class="header-center-right">
                         <div class="search-bar">
@@ -401,11 +410,11 @@
                             echo "<p class='SKU'>SKU: {$ma}</p>";
                             echo "<div class='price-container'>";
                             echo "<div class='price-box'>";
-                            echo "<label>Flash Sale</label>";
+                            echo "<label>Giá Gốc</label>";
                             echo "<div class='price'>{$gia} đ</div>";
                             echo "</div>";
                             echo "<div class='installment'>";
-                            echo "<label>Trả góp từ</label>";
+                            echo "<label>Flash Sale</label>";
                             echo "<div class='amount'>{$flashsale} đ</div>";
                             echo "</div>";
                             // echo "<button class='view-detail js-add-minicart'>Mua Ngay</button>";
@@ -731,7 +740,7 @@
                             echo "<form id='form-voucher' method='post'>";
                                 echo "<div class='discount-ps'>";
                                     echo "<input id='input-voucher' type='hidden' value='capnhat' name='hd'>";
-                                    echo "<input type='submit' name='submit' value='Cap nhat'>";
+                                    echo "<input type='submit' name='submit' value='Cập Nhật'>";
                                 echo "</div>";
                             echo "</form>";
                             echo "<div class='shipping-amount'>";
@@ -761,7 +770,7 @@
                         // echo "<a class='button-pay'>";
                         echo "<form  method='POST'>";
                             echo "<input type='hidden' name='hd' value='xoa'>";
-                            echo "<input class='button-pay' type='submit' name='submit' value='Xoa gio hang'>";
+                            echo "<input class='button-pay' type='submit' name='submit' value='Xóa giỏ hàng'>";
                         echo "</form>";
                         // echo "</a>";
                     echo "</div>";
@@ -928,6 +937,22 @@
             // img.src = URL.createObjectURL(img.files[0]);
             img.src = URL.createObjectURL(img.files[0]);
         }
+    </script>
+
+    <script>
+        const list = document.querySelectorAll('.word')
+        var index = 0
+
+        setInterval((e) => {
+            list.forEach((e) => {
+                e.classList.remove('change-properties')
+            })
+            list[index].classList.add('change-properties')
+            index++
+            if (index == list.length) {
+                index = 0
+            }
+        }, 200)
     </script>
 
 </body>

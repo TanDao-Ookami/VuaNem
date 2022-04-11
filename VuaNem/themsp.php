@@ -61,25 +61,54 @@
             echo "<p style='color:red'> {$tb} </p>";
         }
     ?>
-    <form method="POST" enctype="multipart/form-data">
-        <p style="font-weight: bold;">Them San Pham</p>
+    <div id="add-product">
+        <div class="row">
+            <div class="content">
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="./assets/img/Header/astronaut-fishing-stars-512x512.png" alt="logo">
+                    </a>
+                </div>
+                <form class="form-info" method="POST" enctype="multipart/form-data">
+                    <div class="title-cart" style="font-weight: bold;">Thêm Sản Phẩm</div>
 
-        <p><label for="ten">Ten san pham</label><br>
-        <input type="text" id="ten" name="ten" value="<?=$ten?>" required style="width:300px;"></p>
+                    <div class="form-group">
+                        <div class="label" for="ten">Tên Sản Phẩm<sup>*</sup></div>
+                        <input class="form-control" type="text" id="ten" name="ten" value="<?=$ten?>" required></p>
+                    </div>
+                    <div class="form-group">
+                        <div class="label" for="gia">Giá Bán<sup>*</sup></div>
+                        <input class="form-control" type="number" id="gia" name="gia"></p>
+                    </div>
+                    <div class="form-group">
+                        <div class="label" for="flashsale">Flashsale<sup>*</sup></div>
+                        <input class="form-control" type="number" id="flashsale" name="flashsale" value="<?=$flashsale?>" required></p>
+                    </div>
+                    <p><label for="hinh">Hình Ảnh<sup>*</sup></label><br>
+                    <input type="file" id="hinh" name="hinh" required accept="image/*" onchange="xuat_hinh(this)"><br>
+                    <img id="hinhsp" src="#" alt="chưa có hình" style="max-width: 300px;">
+                    </p>
 
-        <p><label for="gia">Gia ban</label><br>
-        <input type="number" id="gia" name="gia" value="<?=$hinh?>" required style="width:150px;"></p>
+                    <div class="pay-button">
+                    <input id="customer-submit" class="button-action" type="submit" name="themsp" value="THÊM">
+                    <button type="button" class="button-action" onclick="window.location.href='hienthisp.php'">HỦY</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+            <div id="loading-form">
+                <div id="loading">
+                    <div class="item1"></div>
+                    <div class="item2"></div>
+                    <div class="item3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <p><label for="flashsale">Flashsale</label><br>
-        <input type="number" id="flashsale" name="flashsale" value="<?=$flashsale?>" required style="width:150px;"></p>
 
-        <p><label for="hinh">Hinh anh</label><br>
-        <input type="file" id="hinh" name="hinh" required accept="image/*" onchange="xuat_hinh(this)"><br>
-        <img id="hinhsp" src="#" alt="chua co hinh" style="max-width: 300px;">
-        </p>
 
-        <input type="submit" name="themsp" value="Them">
-        <button onclick="window.location.href='hienthisp.php'">Huy</button>
-    </form>
+    
 </body>
 </html>
