@@ -1447,3 +1447,20 @@ sup {
         transform: rotate(0deg);
     }
 }
+
+/* Quan ly don hang & don hang */
+#order-mana {
+    margin-left: 200px;
+}
+
+#order-mana h1{
+    padding: 30px 0;
+}
+
+#order-mana form p{
+    padding: 5px 0;
+}
+
+#order-mana p {
+    padding: 5px 0;
+}
